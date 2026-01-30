@@ -1,0 +1,15 @@
+<header class="input-container">
+  <input
+    class="city-input"
+    placeholder="Buscar..."
+    type="text"
+    [(ngModel)]="cityInput"
+    (input)="onInputChange()"
+    (keydown)="onKeyDown($event)"
+  >
+  <button class="search-btn" (click)="onSearch()">
+    <span class="material-symbols-outlined">
+      search
+    </span>
+  </button>
+</header>
