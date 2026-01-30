@@ -2,13 +2,14 @@ import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { WeatherData, ForecastData } from '../interfaces/weather.interface';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WeatherService {
   private readonly http = inject(HttpClient);
-  private readonly API_KEY = '93c8dc4eb809e8360d5b75c09e1aa14a';
+  private readonly API_KEY = environment.openWeatherApiKey;
   private readonly BASE_URL = 'https://api.openweathermap.org/data/2.5';
 
   getWeather(city: string): Observable<WeatherData> {
