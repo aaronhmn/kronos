@@ -1,4 +1,4 @@
-import { Component, output } from '@angular/core';
+import { Component, output, ViewChild, ElementRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './search-bar.css'
 })
 export class SearchBar {
+  @ViewChild('cityInputRef') cityInputRef!: ElementRef<HTMLInputElement>;
+
   search = output<string>();
 
   cityInput = '';
@@ -39,6 +41,9 @@ export class SearchBar {
     if (this.cityInput.trim()) {
       this.search.emit(this.cityInput.trim());
       this.cityInput = '';
+
+      // Cerrar el teclado móvil
+      this.cityInputRef.nativeElement.blur();
     }
   }
 
