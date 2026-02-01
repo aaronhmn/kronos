@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 html {
-    font-size: 14px; /* móvil */
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
@@ -21,8 +21,6 @@ html {
         font-size: 21px;
     }
 }
-
-/* ========================= */
 
 * {
     margin: 0;
@@ -44,7 +42,6 @@ body {
     --bg-image: url('assets/bg.jpg');
 }
 
-/* Capa de fondo con la imagen */
 body::before {
     content: "";
     position: fixed;
@@ -61,7 +58,6 @@ body::before {
     z-index: -2;
 }
 
-/* Capa de overlay oscuro */
 body::after {
     content: "";
     position: fixed;
@@ -73,10 +69,6 @@ body::after {
 .regular-txt {
     font-weight: 400;
 }
-
-/* =========================
-   CARD PRINCIPAL
-========================= */
 
 .main-container {
     width: 23.5rem;
@@ -92,8 +84,6 @@ body::after {
     padding: 1.25rem;
 }
 
-/* ========================= */
-
 .input-container {
     position: relative;
     margin-bottom: 1.6rem;
@@ -101,14 +91,14 @@ body::after {
 
 .city-input {
     width: 100%;
-    padding: 0.40rem 1.2rem;
+    padding: 0.80rem 1.2rem;
     padding-right: 2.8rem;
     border-radius: 6rem;
     border: 0.2rem solid transparent;
     background: rgba(0, 0, 0, 0.15);
     outline: none;
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 1.04rem;
 }
 
 .city-input:focus {
@@ -131,7 +121,7 @@ body::after {
 }
 
 .search-btn span{
-    font-size: 1.5rem;
+    font-size: 1.64rem;
     padding: 4px;
 }
 
@@ -140,8 +130,6 @@ body::after {
     border-radius: 99px;
     transition: 0.3s;
 }
-
-/* ========================= */
 
 .weather-info {
     display: flex;
@@ -163,10 +151,16 @@ body::after {
 }
 
 .location span {
-    font-size: 1.7rem;
+    font-size: 1.84rem;
 }
 
-/* ========================= */
+.country-txt {
+    font-size: 1.14rem;
+}
+
+.current-date-txt {
+    font-size: 0.99rem;
+}
 
 .weather-summary-container {
     display: flex;
@@ -175,15 +169,21 @@ body::after {
 }
 
 .weather-summary-img {
-    width: 7.5rem;
-    height: 7.5rem;
+    width: 7.64rem;
+    height: 7.64rem;
 }
 
 .weather-summary-info {
     text-align: end;
 }
 
-/* ========================= */
+.temp-txt {
+    font-size: 2.64rem;
+}
+
+.condition-txt {
+    font-size: 1.14rem;
+}
 
 .weather-conditions-container {
     display: flex;
@@ -197,10 +197,16 @@ body::after {
 }
 
 .condition-item span {
-    font-size: 1.7rem;
+    font-size: 1.84rem;
 }
 
-/* ========================= */
+.condition-info h4 {
+    font-size: 1.04rem;
+}
+
+.condition-info h5 {
+    font-size: 1.09rem;
+}
 
 .forecast-items-container {
     display: flex;
@@ -223,10 +229,8 @@ body::after {
     border-radius: 6rem;
 }
 
-/* ========================= */
-
 .forecast-item {
-    min-width: 5.9rem;
+    min-width: 6.6rem;
     background: rgba(255, 255, 255, 0.1);
     display: flex;
     flex-direction: column;
@@ -242,11 +246,17 @@ body::after {
 }
 
 .forecast-item-img {
-    width: 2.75rem;
-    height: 2.75rem;
+    width: 2.89rem;
+    height: 2.89rem;
 }
 
-/* ========================= */
+.forecast-item-date {
+    font-size: 0.94rem;
+}
+
+.forecast-item-temp {
+    font-size: 1.04rem;
+}
 
 .section-message {
     display: flex;
@@ -258,8 +268,20 @@ body::after {
 }
 
 .section-message img {
-    height: 11rem;
+    height: 11.14rem;
     width: fit-content;
+}
+
+.section-message h1 {
+    font-size: 2.14rem;
+}
+
+.section-message h2 {
+    font-size: 1.64rem;
+}
+
+.section-message h4 {
+    font-size: 1.14rem;
 }
 
 .title-search {
