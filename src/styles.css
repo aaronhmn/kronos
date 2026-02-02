@@ -101,6 +101,13 @@ body::after {
     font-size: 1.04rem;
 }
 
+@media (min-width: 768px) {
+    .city-input {
+        padding: 0.40rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
 .city-input:focus {
     border: 0.2rem solid rgba(0, 0, 0, 0.15);
 }
@@ -123,6 +130,12 @@ body::after {
 .search-btn span{
     font-size: 1.64rem;
     padding: 4px;
+}
+
+@media (min-width: 768px) {
+    .search-btn span {
+        font-size: 1.5rem;
+    }
 }
 
 .search-btn:hover{
@@ -154,12 +167,30 @@ body::after {
     font-size: 1.84rem;
 }
 
+@media (min-width: 768px) {
+    .location span {
+        font-size: 1.7rem;
+    }
+}
+
 .country-txt {
     font-size: 1.14rem;
 }
 
+@media (min-width: 768px) {
+    .country-txt {
+        font-size: 1rem;
+    }
+}
+
 .current-date-txt {
     font-size: 0.99rem;
+}
+
+@media (min-width: 768px) {
+    .current-date-txt {
+        font-size: 0.85rem;
+    }
 }
 
 .weather-summary-container {
@@ -173,6 +204,13 @@ body::after {
     height: 7.64rem;
 }
 
+@media (min-width: 768px) {
+    .weather-summary-img {
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+}
+
 .weather-summary-info {
     text-align: end;
 }
@@ -181,8 +219,20 @@ body::after {
     font-size: 2.64rem;
 }
 
+@media (min-width: 768px) {
+    .temp-txt {
+        font-size: 2.5rem;
+    }
+}
+
 .condition-txt {
     font-size: 1.14rem;
+}
+
+@media (min-width: 768px) {
+    .condition-txt {
+        font-size: 1rem;
+    }
 }
 
 .weather-conditions-container {
@@ -200,12 +250,30 @@ body::after {
     font-size: 1.84rem;
 }
 
+@media (min-width: 768px) {
+    .condition-item span {
+        font-size: 1.7rem;
+    }
+}
+
 .condition-info h4 {
     font-size: 1.04rem;
 }
 
+@media (min-width: 768px) {
+    .condition-info h4 {
+        font-size: 0.9rem;
+    }
+}
+
 .condition-info h5 {
     font-size: 1.09rem;
+}
+
+@media (min-width: 768px) {
+    .condition-info h5 {
+        font-size: 0.95rem;
+    }
 }
 
 .forecast-items-container {
@@ -241,6 +309,12 @@ body::after {
     transition: 0.1s background;
 }
 
+@media (min-width: 768px) {
+    .forecast-item {
+        min-width: 5.9rem;
+    }
+}
+
 .forecast-item:hover {
     background: rgba(255, 255, 255, 0.15);
 }
@@ -250,12 +324,31 @@ body::after {
     height: 2.89rem;
 }
 
+@media (min-width: 768px) {
+    .forecast-item-img {
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+}
+
 .forecast-item-date {
     font-size: 0.94rem;
 }
 
+@media (min-width: 768px) {
+    .forecast-item-date {
+        font-size: 0.8rem;
+    }
+}
+
 .forecast-item-temp {
     font-size: 1.04rem;
+}
+
+@media (min-width: 768px) {
+    .forecast-item-temp {
+        font-size: 0.9rem;
+    }
 }
 
 .section-message {
@@ -272,18 +365,109 @@ body::after {
     width: fit-content;
 }
 
+@media (min-width: 768px) {
+    .section-message img {
+        height: 11rem;
+    }
+}
+
 .section-message h1 {
     font-size: 2.14rem;
+}
+
+@media (min-width: 768px) {
+    .section-message h1 {
+        font-size: 2rem;
+    }
 }
 
 .section-message h2 {
     font-size: 1.64rem;
 }
 
+@media (min-width: 768px) {
+    .section-message h2 {
+        font-size: 1.5rem;
+    }
+}
+
 .section-message h4 {
     font-size: 1.14rem;
 }
 
+@media (min-width: 768px) {
+    .section-message h4 {
+        font-size: 1rem;
+    }
+}
+
 .title-search {
     margin-bottom: 0.5rem;
+}
+
+.suggestions-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(20, 20, 30, 0.99);
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(255, 255, 255, 0.3);
+  margin-top: 0.5rem;
+  max-height: 15rem;
+  overflow-y: auto;
+  z-index: 100;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.suggestions-dropdown::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.suggestions-dropdown::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 6rem;
+}
+
+.suggestions-dropdown::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6rem;
+}
+
+.suggestion-item {
+  padding: 0.75rem 1.2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.15s ease;
+  border-bottom: 0.05rem solid rgba(255, 255, 255, 0.1);
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.suggestion-item:first-child {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.suggestion-item:last-child {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.city-name {
+  font-weight: 500;
+  font-size: 1rem;
+  color: white;
+}
+
+.country-code {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
 }

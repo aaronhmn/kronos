@@ -7,10 +7,22 @@
     [(ngModel)]="cityInput"
     (input)="onInputChange()"
     (keydown)="onKeyDown($event)"
+    (blur)="closeSuggestions()"
   >
   <button class="search-btn" (click)="onSearch()">
     <span class="material-symbols-outlined">
       search
     </span>
   </button>
+
+  <div class="suggestions-dropdown" *ngIf="showSuggestions && suggestions.length > 0">
+    <div
+      class="suggestion-item"
+      *ngFor="let suggestion of suggestions"
+      (mousedown)="selectSuggestion(suggestion)"
+    >
+      <span class="city-name">{{ suggestion.name }}</span>
+      <span class="country-code">{{ suggestion.country }}</span>
+    </div>
+  </div>
 </header>
