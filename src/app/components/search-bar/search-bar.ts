@@ -103,6 +103,9 @@ export class SearchBar {
     this.cityInput = `${suggestion.name}, ${suggestion.country}`;
     this.showSuggestions = false;
     this.suggestions = [];
+    this.search.emit(this.cityInput);
+    this.cityInput = '';
+    this.cityInputRef.nativeElement.blur();
   }
 
   onSearch(): void {
